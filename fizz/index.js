@@ -1,14 +1,14 @@
 
 'use strict';
+/*global $*/
 
 $(function fizz(){
   $('#number-chooser').submit(function(event){
-    event.preventDefault()
+    event.preventDefault();
 
     const input = $(this).find('input[name="number-choice"]').val();
     
     for (let i=1; i <= input; i++) {
-      console.log(`i is ${i}`);
       if (i % 3 === 0 && i % 5 === 0) {
         $('.js-results').append(`<div class="fizz-buzz-item fizz">
         <span>fizz</span>
